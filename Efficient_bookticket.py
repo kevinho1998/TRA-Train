@@ -105,13 +105,13 @@ import pandas as pd
 import smtplib
 
 msg=email.message.EmailMessage()
-msg["From"]="610921212@gms.ndhu.edu.com"
-msg["To"]='610921212@gms.ndhu.edu.tw'
+msg["From"]="email"
+msg["To"]='receive_email'
 msg["Subject"]="台鐵訂票-成功"
 
 
 server=smtplib.SMTP_SSL("smtp.gmail.com",465)
-server.login("forkevintesting@gmail.com","ufzxlqbggomjbdzl")
+server.login("email","verify_code")
 msg.set_content("乘車資訊:\n起站 : "+pinfo[0]+"\n訖站 : "+pinfo[1]+"\n日期 : "+pinfo[2]+"\n車次 : "+pinfo[3]+"\n票數 : "+pinfo[4]+"\n身分證 : "+pinfo[5]+"\n訂票代碼 : "+booknum)
 server.send_message(msg)
 print("執行完畢!")
