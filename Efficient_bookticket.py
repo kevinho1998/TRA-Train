@@ -49,10 +49,9 @@ def get_user_info(pinfo):
     pinfo.append(input("Enter your id :"))
     return pinfo
 
-#pinfo=[]
-#get_user_info(pinfo)
-pinfo=["7000","1000","2021/04/01","273","1","J122899733"]
-#pinfo=["1210","7000","2021/03/23","288","1","U192053442"]
+pinfo=[]
+get_user_info(pinfo)
+#pinfo=["START_STATION","END_STATION","2021/04/01","TRAIN_NO","TICKET_NUM","YOUR_ID"]
 options=webdriver.ChromeOptions()
 options.add_argument('disable-infobars')
 options.add_argument('headless')
